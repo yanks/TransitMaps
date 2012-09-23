@@ -18,9 +18,13 @@
 @property NSString* duration;
 @property CLLocation* startLocation;
 @property CLLocation* destinationLocation;
+@property NSString* startAddress;
+@property NSString* destinationAddress;
 @property NSArray* segments;
+@property(nonatomic) NSArray* overviewAnnotations;
 
 + (TMTrip*) tripWithRouteData:(NSDictionary*)routeData;
 - (NSArray*) allOverlays;
 - (MKPolylineView*)viewForOverlay:(id)overlay;
+- (NSArray*) overviewAnnotations;
 @end

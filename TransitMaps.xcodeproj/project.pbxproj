@@ -27,6 +27,7 @@
 		59B1DB77160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB76160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m */; };
 		59B1DB7E160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB7D160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m */; };
 		59B1DB81160F86DA000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */; };
+		59B1DB8A160F9BEF000F4EFB /* TMSegmentAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB89160F9BEF000F4EFB /* TMSegmentAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,8 @@
 		59B1DB7D160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLLocation+GMapsLocationDecoding.m"; path = "Support/CLLocation+GMapsLocationDecoding.m"; sourceTree = "<group>"; };
 		59B1DB7F160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKPolyline+CLLocationArrayToMKOverlay.h"; path = "Support/MKPolyline+CLLocationArrayToMKOverlay.h"; sourceTree = "<group>"; };
 		59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKPolyline+CLLocationArrayToMKOverlay.m"; path = "Support/MKPolyline+CLLocationArrayToMKOverlay.m"; sourceTree = "<group>"; };
+		59B1DB88160F9BEF000F4EFB /* TMSegmentAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSegmentAnnotation.h; path = Annotations/TMSegmentAnnotation.h; sourceTree = "<group>"; };
+		59B1DB89160F9BEF000F4EFB /* TMSegmentAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSegmentAnnotation.m; path = Annotations/TMSegmentAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +143,7 @@
 		59B1DB6A160F62CA000F4EFB /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				59B1DB87160F9BD3000F4EFB /* Annotations */,
 				59B1DB78160F8378000F4EFB /* Categories */,
 				59B1DB6C160F738C000F4EFB /* TMTripSegment.h */,
 				59B1DB6D160F738C000F4EFB /* TMTripSegment.m */,
@@ -162,6 +166,15 @@
 				59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		59B1DB87160F9BD3000F4EFB /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				59B1DB88160F9BEF000F4EFB /* TMSegmentAnnotation.h */,
+				59B1DB89160F9BEF000F4EFB /* TMSegmentAnnotation.m */,
+			);
+			name = Annotations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +254,7 @@
 				59B1DB77160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m in Sources */,
 				59B1DB7E160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m in Sources */,
 				59B1DB81160F86DA000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */,
+				59B1DB8A160F9BEF000F4EFB /* TMSegmentAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

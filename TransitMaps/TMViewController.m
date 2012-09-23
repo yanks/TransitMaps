@@ -56,11 +56,12 @@
 	[self clearOverlays];
 	
 	//example url: http://maps.googleapis.com/maps/api/directions/json?origin=Brooklyn&destination=Queens&sensor=false&departure_time=1343605500&mode=transit
-	NSString* baseFormat = @"http://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@&sensor=false&departure_time=%lld&mode=transit";
+	NSString* baseFormat = @"http://maps.googleapis.com/maps/api/directions/json?origin=%@&destination=%@&sensor=false&departure_time=%lld&mode=transit&alternatives=true";
 	NSString* from = [[_fromTextField text] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSString* to = [[_toTextField text] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 	NSTimeInterval now = [[NSDate date] timeIntervalSince1970];
 	NSString* url = [NSString stringWithFormat:baseFormat, from, to, (long long)now+60];
+	NSLog(@"%@", url);
 	[[self view] addSubview:_loaderView];
 	[NSURLConnection sendAsynchronousRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:url]] queue:_queue completionHandler:^(NSURLResponse* resp, NSData* data, NSError* err){
 		
@@ -99,17 +100,21 @@
 
 - (void)setupOverview
 {
-	for( TMTrip* trip in _trips ){
-		[_mapView addOverlay:[trip overviewPolyline]];
-		MKPolylineView* lineView = [trip overviewPolylineView];
-		[lineView setStrokeColor:[UIColor colorWithRed:.241 green:.241 blue:.241 alpha:1.0]];
-		[lineView setLineCap:kCGLineCapButt];
-		[lineView setLineWidth:1.0];
-		if( trip == _activeTrip ){
-			[lineView setLineWidth:0.0];
-			[lineView setStrokeColor:[UIColor colorWithRed:.241 green:.6 blue:.992 alpha:1.0]];
-		}
-	}
+//	for( TMTrip* trip in _trips ){
+//		if( trip == _activeTrip ) continue;
+//		[_mapView addOverlay:[trip overviewPolyline]];
+//		MKPolylineView* lineView = [trip overviewPolylineView];
+//		[lineView setStrokeColor:[UIColor colorWithRed:.6 green:.6 blue:.6 alpha:1.0]];
+//		[lineView setLineCap:kCGLineCapButt];
+//		[lineView setLineWidth:0];
+//	}
+	MKPolylineView* lineView = [_activeTrip overviewPolylineView];
+	[lineView setStrokeColor:[UIColor colorWithRed:.241 green:.6 blue:.992 alpha:1.0]];
+	[lineView setLineCap:kCGLineCapButt];
+	[lineView setLineWidth:0];
+	[_mapView addOverlay:[_activeTrip overviewPolyline]];
+	
+	[_mapView addAnnotations:[_activeTrip overviewAnnotations]];
 }
 
 
@@ -121,6 +126,44 @@
 		if( view ) break;
 	}
 	return view;
+}
+
+- (MKAnnotationView*)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+	if ([annotation isKindOfClass:[MKPointAnnotation class]]){
+		static NSString* PinAnnotationIdentifier = @"pinAnnotationIdentifer";
+		MKPinAnnotationView* pinView = (MKPinAnnotationView *)
+		[mapView dequeueReusableAnnotationViewWithIdentifier:PinAnnotationIdentifier];
+		
+		if (!pinView)
+		{
+			// if an existing pin view was not available, create one
+			MKPinAnnotationView* customPinView = [[MKPinAnnotationView alloc]
+																						 initWithAnnotation:annotation reuseIdentifier:PinAnnotationIdentifier];
+			customPinView.animatesDrop = NO;
+			customPinView.canShowCallout = YES;
+			if( [[_activeTrip overviewAnnotations] objectAtIndex:0] == annotation ){
+				customPinView.pinColor = MKPinAnnotationColorGreen;
+			}
+			else customPinView.pinColor = MKPinAnnotationColorRed;
+			
+//			customPinView.canShowCallout = YES;
+			
+			// add a detail disclosure button to the callout which will open a new view controller page
+			//
+			// note: you can assign a specific call out accessory view, or as MKMapViewDelegate you can implement:
+			//  - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control;
+			//
+//			UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//			[rightButton addTarget:self
+//											action:@selector(showOverviewDetails:)
+//						forControlEvents:UIControlEventTouchUpInside];
+//			customPinView.rightCalloutAccessoryView = rightButton;
+			
+			return customPinView;
+		}
+	}
+	return nil;
 }
 
 - (void)mapTapped:(id)sender
