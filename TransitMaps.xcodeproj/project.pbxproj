@@ -19,6 +19,14 @@
 		59B1DB52160E5672000F4EFB /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB50160E5672000F4EFB /* MainStoryboard_iPhone.storyboard */; };
 		59B1DB55160E5672000F4EFB /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB53160E5672000F4EFB /* MainStoryboard_iPad.storyboard */; };
 		59B1DB58160E5672000F4EFB /* TMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB57160E5672000F4EFB /* TMViewController.m */; };
+		59B1DB5F160E56AC000F4EFB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB5E160E56AC000F4EFB /* MapKit.framework */; };
+		59B1DB61160E56B1000F4EFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB60160E56B1000F4EFB /* CoreLocation.framework */; };
+		59B1DB6E160F738C000F4EFB /* TMTripSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB6D160F738C000F4EFB /* TMTripSegment.m */; };
+		59B1DB71160F7829000F4EFB /* NSString+StripHTMLTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB70160F7829000F4EFB /* NSString+StripHTMLTags.m */; };
+		59B1DB74160F813C000F4EFB /* TMTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB73160F813C000F4EFB /* TMTrip.m */; };
+		59B1DB77160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB76160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m */; };
+		59B1DB7E160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB7D160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m */; };
+		59B1DB81160F86DA000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +47,20 @@
 		59B1DB54160E5672000F4EFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		59B1DB56160E5672000F4EFB /* TMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMViewController.h; sourceTree = "<group>"; };
 		59B1DB57160E5672000F4EFB /* TMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMViewController.m; sourceTree = "<group>"; };
+		59B1DB5E160E56AC000F4EFB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		59B1DB60160E56B1000F4EFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		59B1DB6C160F738C000F4EFB /* TMTripSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTripSegment.h; path = Support/TMTripSegment.h; sourceTree = "<group>"; };
+		59B1DB6D160F738C000F4EFB /* TMTripSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTripSegment.m; path = Support/TMTripSegment.m; sourceTree = "<group>"; };
+		59B1DB6F160F7829000F4EFB /* NSString+StripHTMLTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StripHTMLTags.h"; path = "Support/NSString+StripHTMLTags.h"; sourceTree = "<group>"; };
+		59B1DB70160F7829000F4EFB /* NSString+StripHTMLTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StripHTMLTags.m"; path = "Support/NSString+StripHTMLTags.m"; sourceTree = "<group>"; };
+		59B1DB72160F813C000F4EFB /* TMTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTrip.h; path = Support/TMTrip.h; sourceTree = "<group>"; };
+		59B1DB73160F813C000F4EFB /* TMTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTrip.m; path = Support/TMTrip.m; sourceTree = "<group>"; };
+		59B1DB75160F8315000F4EFB /* NSString+GMapsPolylineDecoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+GMapsPolylineDecoding.h"; path = "Support/NSString+GMapsPolylineDecoding.h"; sourceTree = "<group>"; };
+		59B1DB76160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+GMapsPolylineDecoding.m"; path = "Support/NSString+GMapsPolylineDecoding.m"; sourceTree = "<group>"; };
+		59B1DB7C160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocation+GMapsLocationDecoding.h"; path = "Support/CLLocation+GMapsLocationDecoding.h"; sourceTree = "<group>"; };
+		59B1DB7D160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLLocation+GMapsLocationDecoding.m"; path = "Support/CLLocation+GMapsLocationDecoding.m"; sourceTree = "<group>"; };
+		59B1DB7F160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKPolyline+CLLocationArrayToMKOverlay.h"; path = "Support/MKPolyline+CLLocationArrayToMKOverlay.h"; sourceTree = "<group>"; };
+		59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKPolyline+CLLocationArrayToMKOverlay.m"; path = "Support/MKPolyline+CLLocationArrayToMKOverlay.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59B1DB61160E56B1000F4EFB /* CoreLocation.framework in Frameworks */,
+				59B1DB5F160E56AC000F4EFB /* MapKit.framework in Frameworks */,
 				59B1DB39160E5672000F4EFB /* UIKit.framework in Frameworks */,
 				59B1DB3B160E5672000F4EFB /* Foundation.framework in Frameworks */,
 				59B1DB3D160E5672000F4EFB /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +99,8 @@
 		59B1DB37160E5672000F4EFB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59B1DB60160E56B1000F4EFB /* CoreLocation.framework */,
+				59B1DB5E160E56AC000F4EFB /* MapKit.framework */,
 				59B1DB38160E5672000F4EFB /* UIKit.framework */,
 				59B1DB3A160E5672000F4EFB /* Foundation.framework */,
 				59B1DB3C160E5672000F4EFB /* CoreGraphics.framework */,
@@ -85,6 +111,7 @@
 		59B1DB3E160E5672000F4EFB /* TransitMaps */ = {
 			isa = PBXGroup;
 			children = (
+				59B1DB6A160F62CA000F4EFB /* Support */,
 				59B1DB47160E5672000F4EFB /* TMAppDelegate.h */,
 				59B1DB48160E5672000F4EFB /* TMAppDelegate.m */,
 				59B1DB50160E5672000F4EFB /* MainStoryboard_iPhone.storyboard */,
@@ -108,6 +135,33 @@
 				59B1DB4E160E5672000F4EFB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59B1DB6A160F62CA000F4EFB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				59B1DB78160F8378000F4EFB /* Categories */,
+				59B1DB6C160F738C000F4EFB /* TMTripSegment.h */,
+				59B1DB6D160F738C000F4EFB /* TMTripSegment.m */,
+				59B1DB72160F813C000F4EFB /* TMTrip.h */,
+				59B1DB73160F813C000F4EFB /* TMTrip.m */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		59B1DB78160F8378000F4EFB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				59B1DB7C160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.h */,
+				59B1DB7D160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m */,
+				59B1DB6F160F7829000F4EFB /* NSString+StripHTMLTags.h */,
+				59B1DB70160F7829000F4EFB /* NSString+StripHTMLTags.m */,
+				59B1DB75160F8315000F4EFB /* NSString+GMapsPolylineDecoding.h */,
+				59B1DB76160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m */,
+				59B1DB7F160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.h */,
+				59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +235,12 @@
 				59B1DB45160E5672000F4EFB /* main.m in Sources */,
 				59B1DB49160E5672000F4EFB /* TMAppDelegate.m in Sources */,
 				59B1DB58160E5672000F4EFB /* TMViewController.m in Sources */,
+				59B1DB6E160F738C000F4EFB /* TMTripSegment.m in Sources */,
+				59B1DB71160F7829000F4EFB /* NSString+StripHTMLTags.m in Sources */,
+				59B1DB74160F813C000F4EFB /* TMTrip.m in Sources */,
+				59B1DB77160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m in Sources */,
+				59B1DB7E160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m in Sources */,
+				59B1DB81160F86DA000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +366,7 @@
 				59B1DB5D160E5672000F4EFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

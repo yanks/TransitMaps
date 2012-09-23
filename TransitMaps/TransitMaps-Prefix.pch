@@ -11,4 +11,8 @@
 #ifdef __OBJC__
 	#import <UIKit/UIKit.h>
 	#import <Foundation/Foundation.h>
+	#import "CLLocation+GMapsLocationDecoding.h"
+	#import "NSString+GMapsPolylineDecoding.h"
+	#import "NSString+StripHTMLTags.h"
+	#import "MKPolyline+CLLocationArrayToMKOverlay.h"
 #endif
