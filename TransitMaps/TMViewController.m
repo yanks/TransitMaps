@@ -75,13 +75,6 @@
 			[_trips addObject:[TMTrip tripWithRouteData:route]];
 		}
 		
-//		TMTrip* first = [_trips objectAtIndex:0];
-//		
-//		MKPolylineView* view = [[MKPolylineView alloc] initWithPolyline:[first overviewPolyline]];
-//		[view setStrokeColor:[UIColor colorWithRed:.241 green:.6 blue:.992 alpha:1.0]];
-//		[view setLineCap:kCGLineCapButt];
-//		MKPolyline* polyline = [first overviewPolyline];
-		
 		_overviewMode = YES;
 		
 		[self setActiveTrip:[_trips objectAtIndex:0]];
@@ -103,14 +96,6 @@
 
 - (void)setupOverview
 {
-//	for( TMTrip* trip in _trips ){
-//		if( trip == _activeTrip ) continue;
-//		[_mapView addOverlay:[trip overviewPolyline]];
-//		MKPolylineView* lineView = [trip overviewPolylineView];
-//		[lineView setStrokeColor:[UIColor colorWithRed:.6 green:.6 blue:.6 alpha:1.0]];
-//		[lineView setLineCap:kCGLineCapButt];
-//		[lineView setLineWidth:0];
-//	}
 	MKPolylineView* lineView = [_activeTrip overviewPolylineView];
 	[lineView setStrokeColor:[UIColor colorWithRed:.241 green:.6 blue:.992 alpha:1.0]];
 	[lineView setLineCap:kCGLineCapButt];
@@ -152,20 +137,6 @@
 			pinView.pinColor = MKPinAnnotationColorGreen;
 		}
 		else pinView.pinColor = MKPinAnnotationColorRed;
-		
-		//			customPinView.canShowCallout = YES;
-		
-		// add a detail disclosure button to the callout which will open a new view controller page
-		//
-		// note: you can assign a specific call out accessory view, or as MKMapViewDelegate you can implement:
-		//  - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control;
-		//
-		//			UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-		//			[rightButton addTarget:self
-		//											action:@selector(showOverviewDetails:)
-		//						forControlEvents:UIControlEventTouchUpInside];
-		//			customPinView.rightCalloutAccessoryView = rightButton;
-		
 		return pinView;
 	}
 	else if( [annotation isKindOfClass:[TMSegmentAnnotation class]]){
