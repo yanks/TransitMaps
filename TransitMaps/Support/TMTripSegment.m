@@ -29,14 +29,14 @@
 		instructions = [instructions stringByStrippingHTML];
 	}
 	
-	[segment setStartLocation:[data objectForKey:@"start_location"]];
-	[segment setEndLocation:[data objectForKey:@"end_location"]];
+	[segment setStartLocation:[CLLocation locationForGMapsDictionary:[data objectForKey:@"start_location"]]];
+	[segment setEndLocation:[CLLocation locationForGMapsDictionary:[data objectForKey:@"end_location"]]];
 	
 	//polyline
 	NSDictionary* polylineData = [data objectForKey:@"polyline"];
 	if( !polylineData ) polylineData = [data objectForKey:@"overview_polyline"];
 	NSString* steps = [polylineData objectForKey:@"points"];
-	if( steps ){
+	if( steps && [steps length] < 20000 ){
 		NSArray* polylinePoints = [steps decodePolyLine];
 		CLLocationCoordinate2D coords[[polylinePoints count]];
 		CLLocationCoordinate2D* coordsPtr = coords;
@@ -60,6 +60,21 @@
 			[steps addObject:[TMTripSegment segmentWithMapsData:step]];
 		}
 		[segment setSteps:steps];
+	}
+	
+	//transit data
+	NSDictionary* transitData = [data objectForKey:@"transit_details"];
+	if( !transitData ){
+		[segment setSegmentType:TMSegmentTypeWalking];
+		[segment setSegmentTitle:@"Walk"];
+		[segment setSegmentSubtitle:[NSString stringWithFormat:@"%@ - %@", [segment time], [segment distance]]];
+		[segment setSegmentIconURL:@"http://maps.gstatic.com/mapfiles/transit/iw/4/walk.png"];
+	}
+	else{
+		[segment setSegmentTitle:[NSString stringWithFormat:@"%@ - %@", [[transitData objectForKey:@"line"] objectForKey:@"short_name"], [[transitData objectForKey:@"line"] objectForKey:@"name"]]];
+		[segment setSegmentSubtitle:[NSString stringWithFormat:@"Depart: %@", [[transitData objectForKey:@"departure_time"] objectForKey:@"text"]]];
+		NSString* icon = [NSString stringWithFormat:@"https:%@", [[transitData objectForKey:@"line"] objectForKey:@"icon"]];
+		[segment setSegmentIconURL:[icon stringByReplacingOccurrencesOfString:@"/iw/6" withString:@"/iw/4"]];
 	}
 	return segment;
 }

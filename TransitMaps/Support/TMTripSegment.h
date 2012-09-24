@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum {
+	TMSegmentTypeWalking=0,
+	TMSegmentTypeTransit=1
+} TMSegmentType;
 
 @class CLLocation, MKPolyline, MKPolylineView;
 
@@ -20,6 +24,10 @@
 @property NSArray* steps; //TMTripSegments
 @property MKPolyline* polyline;
 @property MKPolylineView* polylineView;
+@property TMSegmentType segmentType;
+@property NSString* segmentTitle;
+@property NSString* segmentSubtitle;
+@property NSString* segmentIconURL;
 
 + (TMTripSegment*)segmentWithMapsData:(NSDictionary*)data;
 

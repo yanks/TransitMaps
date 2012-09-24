@@ -10,6 +10,7 @@
 #import "TMViewController.h"
 #import "TMTripSegment.h"
 #import "TMTrip.h"
+#import "TMSegmentAnnotation.h"
 
 @interface TMViewController ()
 
@@ -95,6 +96,7 @@
 {
 	for( TMTrip* trip in _trips ){
 		[_mapView removeOverlays:[trip allOverlays]];
+		[_mapView removeAnnotations:[trip allAnnotations]];
 	}
 }
 
@@ -115,6 +117,7 @@
 	[_mapView addOverlay:[_activeTrip overviewPolyline]];
 	
 	[_mapView addAnnotations:[_activeTrip overviewAnnotations]];
+	[_mapView addAnnotations:[_activeTrip stepAnnotations]];
 }
 
 
@@ -138,30 +141,46 @@
 		if (!pinView)
 		{
 			// if an existing pin view was not available, create one
-			MKPinAnnotationView* customPinView = [[MKPinAnnotationView alloc]
+			pinView = [[MKPinAnnotationView alloc]
 																						 initWithAnnotation:annotation reuseIdentifier:PinAnnotationIdentifier];
-			customPinView.animatesDrop = NO;
-			customPinView.canShowCallout = YES;
-			if( [[_activeTrip overviewAnnotations] objectAtIndex:0] == annotation ){
-				customPinView.pinColor = MKPinAnnotationColorGreen;
-			}
-			else customPinView.pinColor = MKPinAnnotationColorRed;
-			
-//			customPinView.canShowCallout = YES;
-			
-			// add a detail disclosure button to the callout which will open a new view controller page
-			//
-			// note: you can assign a specific call out accessory view, or as MKMapViewDelegate you can implement:
-			//  - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control;
-			//
-//			UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//			[rightButton addTarget:self
-//											action:@selector(showOverviewDetails:)
-//						forControlEvents:UIControlEventTouchUpInside];
-//			customPinView.rightCalloutAccessoryView = rightButton;
-			
-			return customPinView;
+			pinView.animatesDrop = NO;
+			pinView.canShowCallout = YES;
 		}
+		
+		if( [[_activeTrip overviewAnnotations] objectAtIndex:0] == annotation ){
+			pinView.pinColor = MKPinAnnotationColorGreen;
+		}
+		else pinView.pinColor = MKPinAnnotationColorRed;
+		
+		//			customPinView.canShowCallout = YES;
+		
+		// add a detail disclosure button to the callout which will open a new view controller page
+		//
+		// note: you can assign a specific call out accessory view, or as MKMapViewDelegate you can implement:
+		//  - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control;
+		//
+		//			UIButton* rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+		//			[rightButton addTarget:self
+		//											action:@selector(showOverviewDetails:)
+		//						forControlEvents:UIControlEventTouchUpInside];
+		//			customPinView.rightCalloutAccessoryView = rightButton;
+		
+		return pinView;
+	}
+	else if( [annotation isKindOfClass:[TMSegmentAnnotation class]]){
+		static NSString* SegmentAnnotationIdentifier = @"SegmentAnnotationIdentifer";
+		MKAnnotationView* segmentView = (MKPinAnnotationView *)
+		[mapView dequeueReusableAnnotationViewWithIdentifier:SegmentAnnotationIdentifier];
+		if( !segmentView ){
+			// if an existing pin view was not available, create one
+			segmentView = [[MKPinAnnotationView alloc]
+																						initWithAnnotation:annotation reuseIdentifier:SegmentAnnotationIdentifier];
+			segmentView.canShowCallout = YES;
+		}
+		if( [(TMSegmentAnnotation*)annotation iconURL] ){
+			[segmentView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[(TMSegmentAnnotation*)annotation iconURL]]]]];
+		}
+		return segmentView;
 	}
 	return nil;
 }

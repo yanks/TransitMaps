@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface TMSegmentAnnotation : NSObject<MKAnnotation>
 @property NSString* iconURL;
+@property NSString* title;
+@property NSString* subtitle;
+@property CLLocationCoordinate2D coordinate;
 @end

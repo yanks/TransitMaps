@@ -7,6 +7,7 @@
 //
 
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "TMTrip.h"
 #import "TMTripSegment.h"
 #import "TMSegmentAnnotation.h"
@@ -59,16 +60,32 @@
 	// walk icon: https://maps.gstatic.com/mapfiles/transit/iw/6/walk.png
 	// bus icon: https://maps.gstatic.com/mapfiles/transit/iw/6/bus.png
 	// rail icon: https://maps.gstatic.com/mapfiles/transit/iw/6/rail.png
-	
-	
-	
-	
-	return nil;
+	if( !_stepAnnotations ){
+		NSMutableArray* annotations = [NSMutableArray array];
+		for( TMTripSegment* segment in _segments ){
+			TMSegmentAnnotation* annotation = [[TMSegmentAnnotation alloc] init];
+			[annotation setTitle:[segment segmentTitle]];
+			[annotation setSubtitle:[segment segmentTitle]];
+			[annotation setIconURL:[segment segmentIconURL]];
+			[annotation setCoordinate:[[segment startLocation] coordinate]];
+			[annotations addObject:annotation];
+		}
+		_stepAnnotations = annotations;
+	}
+	return _stepAnnotations;
+}
+
+- (NSArray*)allAnnotations
+{
+	NSMutableArray* annotations = [NSMutableArray array];
+	[annotations addObjectsFromArray:_stepAnnotations];
+	[annotations addObjectsFromArray:_overviewAnnotations];
+	return annotations;
 }
 
 - (NSArray*) allOverlays
 {
-	NSMutableArray* overlays = [NSMutableArray arrayWithObject:_overviewPolylineView];
+	NSMutableArray* overlays = [NSMutableArray arrayWithObject:_overviewPolyline];
 	for( TMTripSegment* segment in _segments ){
 		[overlays addObject:[segment polyline]];
 	}

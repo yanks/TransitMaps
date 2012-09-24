@@ -22,9 +22,12 @@
 @property NSString* destinationAddress;
 @property NSArray* segments;
 @property(nonatomic) NSArray* overviewAnnotations;
+@property(nonatomic) NSArray* stepAnnotations;
 
 + (TMTrip*) tripWithRouteData:(NSDictionary*)routeData;
 - (NSArray*) allOverlays;
 - (MKPolylineView*)viewForOverlay:(id)overlay;
 - (NSArray*) overviewAnnotations;
+- (NSArray*) stepAnnotations;
+- (NSArray*) allAnnotations;
 @end
