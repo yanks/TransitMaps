@@ -28,6 +28,8 @@
 		59B1DB7E160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB7D160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m */; };
 		59B1DB81160F86DA000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */; };
 		59B1DB8A160F9BEF000F4EFB /* TMSegmentAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB89160F9BEF000F4EFB /* TMSegmentAnnotation.m */; };
+		59B1DB9416101E65000F4EFB /* TMAnnotationImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB9316101E65000F4EFB /* TMAnnotationImageHelper.m */; };
+		59B1DB97161021E7000F4EFB /* annotationPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB96161021E7000F4EFB /* annotationPoint.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,9 @@
 		59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKPolyline+CLLocationArrayToMKOverlay.m"; path = "Support/MKPolyline+CLLocationArrayToMKOverlay.m"; sourceTree = "<group>"; };
 		59B1DB88160F9BEF000F4EFB /* TMSegmentAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSegmentAnnotation.h; path = Annotations/TMSegmentAnnotation.h; sourceTree = "<group>"; };
 		59B1DB89160F9BEF000F4EFB /* TMSegmentAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSegmentAnnotation.m; path = Annotations/TMSegmentAnnotation.m; sourceTree = "<group>"; };
+		59B1DB9216101E65000F4EFB /* TMAnnotationImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMAnnotationImageHelper.h; path = Support/TMAnnotationImageHelper.h; sourceTree = "<group>"; };
+		59B1DB9316101E65000F4EFB /* TMAnnotationImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMAnnotationImageHelper.m; path = Support/TMAnnotationImageHelper.m; sourceTree = "<group>"; };
+		59B1DB96161021E7000F4EFB /* annotationPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = annotationPoint.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +134,7 @@
 		59B1DB3F160E5672000F4EFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59B1DB96161021E7000F4EFB /* annotationPoint.png */,
 				59B1DB40160E5672000F4EFB /* TransitMaps-Info.plist */,
 				59B1DB41160E5672000F4EFB /* InfoPlist.strings */,
 				59B1DB44160E5672000F4EFB /* main.m */,
@@ -173,6 +179,8 @@
 			children = (
 				59B1DB88160F9BEF000F4EFB /* TMSegmentAnnotation.h */,
 				59B1DB89160F9BEF000F4EFB /* TMSegmentAnnotation.m */,
+				59B1DB9216101E65000F4EFB /* TMAnnotationImageHelper.h */,
+				59B1DB9316101E65000F4EFB /* TMAnnotationImageHelper.m */,
 			);
 			name = Annotations;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 				59B1DB4F160E5672000F4EFB /* Default-568h@2x.png in Resources */,
 				59B1DB52160E5672000F4EFB /* MainStoryboard_iPhone.storyboard in Resources */,
 				59B1DB55160E5672000F4EFB /* MainStoryboard_iPad.storyboard in Resources */,
+				59B1DB97161021E7000F4EFB /* annotationPoint.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +264,7 @@
 				59B1DB7E160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m in Sources */,
 				59B1DB81160F86DA000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */,
 				59B1DB8A160F9BEF000F4EFB /* TMSegmentAnnotation.m in Sources */,
+				59B1DB9416101E65000F4EFB /* TMAnnotationImageHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

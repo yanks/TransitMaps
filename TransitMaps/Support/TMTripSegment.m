@@ -9,7 +9,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "TMTripSegment.h"
-
+#import "TMAnnotationImageHelper.h"
 
 @implementation TMTripSegment
 + (TMTripSegment*)segmentWithMapsData:(NSDictionary*)data
@@ -69,12 +69,29 @@
 		[segment setSegmentTitle:@"Walk"];
 		[segment setSegmentSubtitle:[NSString stringWithFormat:@"%@ - %@", [segment time], [segment distance]]];
 		[segment setSegmentIconURL:@"http://maps.gstatic.com/mapfiles/transit/iw/4/walk.png"];
+		[TMAnnotationImageHelper imageForIconURL:[segment segmentIconURL]];
 	}
 	else{
-		[segment setSegmentTitle:[NSString stringWithFormat:@"%@ - %@", [[transitData objectForKey:@"line"] objectForKey:@"short_name"], [[transitData objectForKey:@"line"] objectForKey:@"name"]]];
+		NSString* shortName = [[transitData objectForKey:@"line"] objectForKey:@"short_name"];
+		if( shortName ){
+			[segment setSegmentTitle:[NSString stringWithFormat:@"%@ - %@", [[transitData objectForKey:@"line"] objectForKey:@"short_name"], [[transitData objectForKey:@"line"] objectForKey:@"name"]]];
+		}
+		else{
+			[segment setSegmentTitle:[[transitData objectForKey:@"line"] objectForKey:@"name"]];
+		}
+
 		[segment setSegmentSubtitle:[NSString stringWithFormat:@"Depart: %@", [[transitData objectForKey:@"departure_time"] objectForKey:@"text"]]];
-		NSString* icon = [NSString stringWithFormat:@"https:%@", [[transitData objectForKey:@"line"] objectForKey:@"icon"]];
+		
+		NSString* iconURLWithoutProtocol = [[transitData objectForKey:@"line"] objectForKey:@"icon"];
+		if( !iconURLWithoutProtocol ){
+			//vehicle?
+			iconURLWithoutProtocol = [[[transitData objectForKey:@"line"] objectForKey:@"vehicle"] objectForKey:@"icon"];
+		}
+		NSString* icon = [NSString stringWithFormat:@"https:%@", iconURLWithoutProtocol];
 		[segment setSegmentIconURL:[icon stringByReplacingOccurrencesOfString:@"/iw/6" withString:@"/iw/4"]];
+
+		NSLog(@"%@", [segment segmentIconURL]);
+		[TMAnnotationImageHelper imageForIconURL:[segment segmentIconURL]];
 	}
 	return segment;
 }

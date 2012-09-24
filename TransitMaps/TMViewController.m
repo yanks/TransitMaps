@@ -11,6 +11,7 @@
 #import "TMTripSegment.h"
 #import "TMTrip.h"
 #import "TMSegmentAnnotation.h"
+#import "TMAnnotationImageHelper.h"
 
 @interface TMViewController ()
 
@@ -178,7 +179,7 @@
 			segmentView.canShowCallout = YES;
 		}
 		if( [(TMSegmentAnnotation*)annotation iconURL] ){
-			[segmentView setImage:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[(TMSegmentAnnotation*)annotation iconURL]]]]];
+			[segmentView setImage:[TMAnnotationImageHelper imageForIconURL:[(TMSegmentAnnotation*)annotation iconURL]]];
 		}
 		return segmentView;
 	}

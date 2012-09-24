@@ -65,7 +65,7 @@
 		for( TMTripSegment* segment in _segments ){
 			TMSegmentAnnotation* annotation = [[TMSegmentAnnotation alloc] init];
 			[annotation setTitle:[segment segmentTitle]];
-			[annotation setSubtitle:[segment segmentTitle]];
+			[annotation setSubtitle:[segment segmentSubtitle]];
 			[annotation setIconURL:[segment segmentIconURL]];
 			[annotation setCoordinate:[[segment startLocation] coordinate]];
 			[annotations addObject:annotation];
