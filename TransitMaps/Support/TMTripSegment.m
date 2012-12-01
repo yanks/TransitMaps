@@ -36,7 +36,7 @@
 	NSDictionary* polylineData = [data objectForKey:@"polyline"];
 	if( !polylineData ) polylineData = [data objectForKey:@"overview_polyline"];
 	NSString* steps = [polylineData objectForKey:@"points"];
-	if( steps && [steps length] < 20000 ){
+	if( steps && [steps length] < 20000 ){ //sanity on the polyline
 		NSArray* polylinePoints = [steps decodePolyLine];
 		CLLocationCoordinate2D coords[[polylinePoints count]];
 		CLLocationCoordinate2D* coordsPtr = coords;
@@ -90,7 +90,6 @@
 		NSString* icon = [NSString stringWithFormat:@"https:%@", iconURLWithoutProtocol];
 		[segment setSegmentIconURL:[icon stringByReplacingOccurrencesOfString:@"/iw/6" withString:@"/iw/4"]];
 
-		NSLog(@"%@", [segment segmentIconURL]);
 		[TMAnnotationImageHelper imageForIconURL:[segment segmentIconURL]];
 	}
 	return segment;

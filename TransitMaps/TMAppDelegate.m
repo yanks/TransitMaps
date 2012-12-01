@@ -7,13 +7,19 @@
 //
 
 #import "TMAppDelegate.h"
+#import "TMViewController.h"
 
 @implementation TMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    return YES;
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	// Override point for customization after application launch.
+	self.viewController = [[TMViewController alloc] initWithNibName:@"TMViewController" bundle:nil];
+	self.window.rootViewController = self.viewController;
+  // Override point for customization after application launch.
+	[_window makeKeyAndVisible];
+	return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

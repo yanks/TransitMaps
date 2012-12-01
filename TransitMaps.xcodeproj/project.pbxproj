@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5932022D166AAB6100B7C8CC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5932022C166AAB6100B7C8CC /* MBProgressHUD.m */; };
+		59320231166AC4A900B7C8CC /* TMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5932022F166AC4A900B7C8CC /* TMViewController.xib */; };
 		59B1DB39160E5672000F4EFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB38160E5672000F4EFB /* UIKit.framework */; };
 		59B1DB3B160E5672000F4EFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB3A160E5672000F4EFB /* Foundation.framework */; };
 		59B1DB3D160E5672000F4EFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB3C160E5672000F4EFB /* CoreGraphics.framework */; };
@@ -16,8 +18,6 @@
 		59B1DB4B160E5672000F4EFB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB4A160E5672000F4EFB /* Default.png */; };
 		59B1DB4D160E5672000F4EFB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB4C160E5672000F4EFB /* Default@2x.png */; };
 		59B1DB4F160E5672000F4EFB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB4E160E5672000F4EFB /* Default-568h@2x.png */; };
-		59B1DB52160E5672000F4EFB /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB50160E5672000F4EFB /* MainStoryboard_iPhone.storyboard */; };
-		59B1DB55160E5672000F4EFB /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB53160E5672000F4EFB /* MainStoryboard_iPad.storyboard */; };
 		59B1DB58160E5672000F4EFB /* TMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB57160E5672000F4EFB /* TMViewController.m */; };
 		59B1DB5F160E56AC000F4EFB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB5E160E56AC000F4EFB /* MapKit.framework */; };
 		59B1DB61160E56B1000F4EFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB60160E56B1000F4EFB /* CoreLocation.framework */; };
@@ -33,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5932022B166AAB6100B7C8CC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Support/MBProgressHUD.h; sourceTree = "<group>"; };
+		5932022C166AAB6100B7C8CC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Support/MBProgressHUD.m; sourceTree = "<group>"; };
+		59320230166AC4A900B7C8CC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = TransitMaps/en.lproj/TMViewController.xib; sourceTree = "<group>"; };
 		59B1DB34160E5672000F4EFB /* TransitMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B1DB38160E5672000F4EFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59B1DB3A160E5672000F4EFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,8 +49,6 @@
 		59B1DB4A160E5672000F4EFB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		59B1DB4C160E5672000F4EFB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		59B1DB4E160E5672000F4EFB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		59B1DB51160E5672000F4EFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		59B1DB54160E5672000F4EFB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		59B1DB56160E5672000F4EFB /* TMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMViewController.h; sourceTree = "<group>"; };
 		59B1DB57160E5672000F4EFB /* TMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMViewController.m; sourceTree = "<group>"; };
 		59B1DB5E160E56AC000F4EFB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -122,8 +123,7 @@
 				59B1DB6A160F62CA000F4EFB /* Support */,
 				59B1DB47160E5672000F4EFB /* TMAppDelegate.h */,
 				59B1DB48160E5672000F4EFB /* TMAppDelegate.m */,
-				59B1DB50160E5672000F4EFB /* MainStoryboard_iPhone.storyboard */,
-				59B1DB53160E5672000F4EFB /* MainStoryboard_iPad.storyboard */,
+				5932022F166AC4A900B7C8CC /* TMViewController.xib */,
 				59B1DB56160E5672000F4EFB /* TMViewController.h */,
 				59B1DB57160E5672000F4EFB /* TMViewController.m */,
 				59B1DB3F160E5672000F4EFB /* Supporting Files */,
@@ -149,6 +149,8 @@
 		59B1DB6A160F62CA000F4EFB /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				5932022B166AAB6100B7C8CC /* MBProgressHUD.h */,
+				5932022C166AAB6100B7C8CC /* MBProgressHUD.m */,
 				59B1DB87160F9BD3000F4EFB /* Annotations */,
 				59B1DB78160F8378000F4EFB /* Categories */,
 				59B1DB6C160F738C000F4EFB /* TMTripSegment.h */,
@@ -241,9 +243,8 @@
 				59B1DB4B160E5672000F4EFB /* Default.png in Resources */,
 				59B1DB4D160E5672000F4EFB /* Default@2x.png in Resources */,
 				59B1DB4F160E5672000F4EFB /* Default-568h@2x.png in Resources */,
-				59B1DB52160E5672000F4EFB /* MainStoryboard_iPhone.storyboard in Resources */,
-				59B1DB55160E5672000F4EFB /* MainStoryboard_iPad.storyboard in Resources */,
 				59B1DB97161021E7000F4EFB /* annotationPoint.png in Resources */,
+				59320231166AC4A900B7C8CC /* TMViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,34 +266,28 @@
 				59B1DB81160F86DA000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */,
 				59B1DB8A160F9BEF000F4EFB /* TMSegmentAnnotation.m in Sources */,
 				59B1DB9416101E65000F4EFB /* TMAnnotationImageHelper.m in Sources */,
+				5932022D166AAB6100B7C8CC /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5932022F166AC4A900B7C8CC /* TMViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59320230166AC4A900B7C8CC /* en */,
+			);
+			name = TMViewController.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		59B1DB41160E5672000F4EFB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				59B1DB42160E5672000F4EFB /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		59B1DB50160E5672000F4EFB /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59B1DB51160E5672000F4EFB /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		59B1DB53160E5672000F4EFB /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59B1DB54160E5672000F4EFB /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
