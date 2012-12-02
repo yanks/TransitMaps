@@ -6,8 +6,13 @@
 //  Copyright (c) 2012 ER. All rights reserved.
 //
 
+#import <MapKit/MapKit.h>
 #import "TMAppDelegate.h"
 #import "TMViewController.h"
+
+@interface TMAppDelegate ()
+@property(strong, nonatomic) TMViewController* mapViewController;
+@end
 
 @implementation TMAppDelegate
 
@@ -15,8 +20,8 @@
 {
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	// Override point for customization after application launch.
-	UIViewController* rootViewController = [[TMViewController alloc] initWithNibName:@"TMViewController" bundle:nil];
-	UINavigationController* navCtl = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+	_mapViewController = [[TMViewController alloc] initWithNibName:@"TMViewController" bundle:nil];
+	UINavigationController* navCtl = [[UINavigationController alloc] initWithRootViewController:_mapViewController];
 	[navCtl setNavigationBarHidden:YES];
 	self.viewController = navCtl;
 	self.window.rootViewController = self.viewController;
@@ -24,7 +29,15 @@
 	[_window makeKeyAndVisible];
 	return YES;
 }
-							
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+	if( [MKDirectionsRequest isDirectionsRequestURL:url] ){
+		[_mapViewController setDirectionsRequest:[[MKDirectionsRequest alloc] initWithContentsOfURL:url]];
+	}
+	return YES;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

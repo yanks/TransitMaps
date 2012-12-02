@@ -161,7 +161,7 @@
 	CLLocationDegrees lngDelta = highY-lowY;
 	
 	CLLocationCoordinate2D center = CLLocationCoordinate2DMake((highX-((highX-lowX)/2)), (highY-((highY-lowY)/2)));
-	MKCoordinateSpan span = MKCoordinateSpanMake(latDelta+.03, lngDelta+.03);
+	MKCoordinateSpan span = MKCoordinateSpanMake(latDelta+.05, lngDelta+.05);
 	[_mapView setRegion:MKCoordinateRegionMake(center, span) animated:YES];
 	
 	[_searchView removeFromSuperview];
@@ -278,4 +278,20 @@
 - (IBAction)routeRightButtonTapped:(id)sender {
 	[self incrementActiveTripBy:1];
 }
+
+- (void)setDirectionsRequest:(MKDirectionsRequest*)request
+{
+	CLPlacemark* start = [[request source] placemark];
+	CLPlacemark* end = [[request destination] placemark];
+	[_fromTextField setText:[self searchStringFromPlacemark:start]];
+	[_toTextField setText:[self searchStringFromPlacemark:end]];
+	[self performSearch];
+}
+
+- (NSString*)searchStringFromPlacemark:(CLPlacemark*)place
+{
+	if( !place ) return @"Current Location";
+	return [NSString stringWithFormat:@"%@, %@, %@", [place thoroughfare], [place locality], [place administrativeArea]];
+}
+
 @end

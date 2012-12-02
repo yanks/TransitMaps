@@ -11,6 +11,8 @@
 		59320231166AC4A900B7C8CC /* TMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5932022F166AC4A900B7C8CC /* TMViewController.xib */; };
 		59320267166AD0D900B7C8CC /* TMDirectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59320265166AD0D900B7C8CC /* TMDirectionListViewController.m */; };
 		59320268166AD0D900B7C8CC /* TMDirectionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59320266166AD0D900B7C8CC /* TMDirectionListViewController.xib */; };
+		5932026A166ADD5500B7C8CC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59320269166ADD5500B7C8CC /* Icon@2x.png */; };
+		5932026C166ADD6E00B7C8CC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5932026B166ADD6E00B7C8CC /* Icon.png */; };
 		59B1DB39160E5672000F4EFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB38160E5672000F4EFB /* UIKit.framework */; };
 		59B1DB3B160E5672000F4EFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB3A160E5672000F4EFB /* Foundation.framework */; };
 		59B1DB3D160E5672000F4EFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB3C160E5672000F4EFB /* CoreGraphics.framework */; };
@@ -41,6 +43,8 @@
 		59320264166AD0D900B7C8CC /* TMDirectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDirectionListViewController.h; sourceTree = "<group>"; };
 		59320265166AD0D900B7C8CC /* TMDirectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDirectionListViewController.m; sourceTree = "<group>"; };
 		59320266166AD0D900B7C8CC /* TMDirectionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMDirectionListViewController.xib; sourceTree = "<group>"; };
+		59320269166ADD5500B7C8CC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		5932026B166ADD6E00B7C8CC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		59B1DB34160E5672000F4EFB /* TransitMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B1DB38160E5672000F4EFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59B1DB3A160E5672000F4EFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,6 +146,8 @@
 		59B1DB3F160E5672000F4EFB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5932026B166ADD6E00B7C8CC /* Icon.png */,
+				59320269166ADD5500B7C8CC /* Icon@2x.png */,
 				59B1DB96161021E7000F4EFB /* annotationPoint.png */,
 				59B1DB40160E5672000F4EFB /* TransitMaps-Info.plist */,
 				59B1DB41160E5672000F4EFB /* InfoPlist.strings */,
@@ -254,6 +260,8 @@
 				59B1DB97161021E7000F4EFB /* annotationPoint.png in Resources */,
 				59320231166AC4A900B7C8CC /* TMViewController.xib in Resources */,
 				59320268166AD0D900B7C8CC /* TMDirectionListViewController.xib in Resources */,
+				5932026A166ADD5500B7C8CC /* Icon@2x.png in Resources */,
+				5932026C166ADD6E00B7C8CC /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +320,7 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jeff Forbes (QQM434555C)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -326,6 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "2D10726E-C049-411D-88CC-6D98F67FE8C3";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

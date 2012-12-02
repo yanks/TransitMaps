@@ -35,4 +35,6 @@
 - (IBAction)routeLeftButtonTapped:(id)sender;
 - (IBAction)routeRightButtonTapped:(id)sender;
 
+- (void)setDirectionsRequest:(MKDirectionsRequest*)request;
+
 @end
