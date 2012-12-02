@@ -27,9 +27,19 @@
 	[_subtitleLabel setText:[segment instructions]];
 	[[self imageView] setImage:[TMAnnotationImageHelper imageForIconURL:[segment segmentIconURL]]];
 	if( [segment transitDestination] ){
+		[_subtitleLabel setNumberOfLines:1];
+		CGRect frame = [_subtitleLabel frame];
+		frame.size.height = 18;
+		[_subtitleLabel setFrame:frame];
 		[_stopLabel setText:[NSString stringWithFormat:@"Get off at %@", [segment transitDestination]]];
 	}
-	else [_stopLabel setText:@""];
+	else{
+		[_subtitleLabel setNumberOfLines:2];
+		CGRect frame = [_subtitleLabel frame];
+		frame.size.height = 36;
+		[_subtitleLabel setFrame:frame];
+		[_stopLabel setText:@""];
+	}
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
