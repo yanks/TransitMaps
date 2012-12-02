@@ -44,7 +44,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	return 75.0f;
+	return 96.0f;
 }
 
 static NSString* __reuseIdentifier = @"DirectionListReuseIdentifier";

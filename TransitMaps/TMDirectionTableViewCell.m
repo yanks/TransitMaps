@@ -32,6 +32,7 @@
 		frame.size.height = 18;
 		[_subtitleLabel setFrame:frame];
 		[_stopLabel setText:[NSString stringWithFormat:@"Get off at %@", [segment transitDestination]]];
+		[_departsLabel setText:[segment segmentSubtitle]];
 	}
 	else{
 		[_subtitleLabel setNumberOfLines:2];
@@ -39,6 +40,7 @@
 		frame.size.height = 36;
 		[_subtitleLabel setFrame:frame];
 		[_stopLabel setText:@""];
+		[_departsLabel setText:@""];
 	}
 }
 
