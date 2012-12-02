@@ -74,6 +74,7 @@
 		[TMAnnotationImageHelper imageForIconURL:[segment segmentIconURL]];
 	}
 	else{
+		[segment setSegmentType:TMSegmentTypeTransit];
 		NSString* shortName = [[transitData objectForKey:@"line"] objectForKey:@"short_name"];
 		if( shortName ){
 			[segment setSegmentTitle:[NSString stringWithFormat:@"%@ - %@", [[transitData objectForKey:@"line"] objectForKey:@"short_name"], [[transitData objectForKey:@"line"] objectForKey:@"name"]]];
@@ -89,6 +90,10 @@
 			//vehicle?
 			iconURLWithoutProtocol = [[[transitData objectForKey:@"line"] objectForKey:@"vehicle"] objectForKey:@"icon"];
 		}
+		
+		//need arrival stop
+		[segment setTransitDestination:[[transitData objectForKey:@"arrival_stop"] objectForKey:@"name"]];
+		
 		NSString* icon = [NSString stringWithFormat:@"https:%@", iconURLWithoutProtocol];
 		[segment setSegmentIconURL:[icon stringByReplacingOccurrencesOfString:@"/iw/6" withString:@"/iw/4"]];
 

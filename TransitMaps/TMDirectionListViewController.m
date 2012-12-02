@@ -10,6 +10,7 @@
 #import "TMTrip.h"
 #import "TMTripSegment.h"
 #import "TMAnnotationImageHelper.h"
+#import "TMDirectionTableViewCell.h"
 
 @interface TMDirectionListViewController ()
 
@@ -28,8 +29,12 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view from its nib.
+	
+	UINib* nib = [UINib nibWithNibName:@"TMDirectionTableViewCell" bundle:nil];
+	[_tableView registerNib:nib forCellReuseIdentifier:__reuseIdentifier];
+	
 }
 
 - (int)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -37,17 +42,20 @@
 	return [[_trip segments] count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return 75.0f;
+}
+
+static NSString* __reuseIdentifier = @"DirectionListReuseIdentifier";
+
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	static NSString* __reuseIdentifier = @"DirectionListReuseIdentifier";
 	UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:__reuseIdentifier];
 	if( !cell ){
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:__reuseIdentifier];
 	}
-	TMTripSegment* segment = [[_trip segments] objectAtIndex:indexPath.row];
-	[[cell textLabel] setText:[segment segmentTitle]];
-	[[cell detailTextLabel] setText:[segment instructions]];
-	[[cell imageView] setImage:[TMAnnotationImageHelper imageForIconURL:[segment segmentIconURL]]];
+	[(TMDirectionTableViewCell*)cell setTripSegment:[[_trip segments] objectAtIndex:indexPath.row]];
 	return cell;
 }
 

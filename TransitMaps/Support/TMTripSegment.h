@@ -29,6 +29,7 @@ typedef enum {
 @property NSString* segmentSubtitle;
 @property NSString* segmentIconURL;
 @property NSString* instructions;
+@property NSString* transitDestination;
 
 + (TMTripSegment*)segmentWithMapsData:(NSDictionary*)data;
 
