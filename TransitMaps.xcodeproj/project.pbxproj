@@ -7,49 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5932022D166AAB6100B7C8CC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5932022C166AAB6100B7C8CC /* MBProgressHUD.m */; };
-		59320231166AC4A900B7C8CC /* TMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5932022F166AC4A900B7C8CC /* TMViewController.xib */; };
-		59320267166AD0D900B7C8CC /* TMDirectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59320265166AD0D900B7C8CC /* TMDirectionListViewController.m */; };
-		59320268166AD0D900B7C8CC /* TMDirectionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59320266166AD0D900B7C8CC /* TMDirectionListViewController.xib */; };
 		5932026A166ADD5500B7C8CC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59320269166ADD5500B7C8CC /* Icon@2x.png */; };
 		5932026C166ADD6E00B7C8CC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5932026B166ADD6E00B7C8CC /* Icon.png */; };
-		59320277166B074500B7C8CC /* TMDirectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59320276166B074500B7C8CC /* TMDirectionTableViewCell.m */; };
-		5932027B166B076100B7C8CC /* TMDirectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59320279166B076100B7C8CC /* TMDirectionTableViewCell.xib */; };
 		59B1DB39160E5672000F4EFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB38160E5672000F4EFB /* UIKit.framework */; };
 		59B1DB3B160E5672000F4EFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB3A160E5672000F4EFB /* Foundation.framework */; };
 		59B1DB3D160E5672000F4EFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB3C160E5672000F4EFB /* CoreGraphics.framework */; };
 		59B1DB43160E5672000F4EFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB41160E5672000F4EFB /* InfoPlist.strings */; };
 		59B1DB45160E5672000F4EFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB44160E5672000F4EFB /* main.m */; };
-		59B1DB49160E5672000F4EFB /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB48160E5672000F4EFB /* TMAppDelegate.m */; };
 		59B1DB4B160E5672000F4EFB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB4A160E5672000F4EFB /* Default.png */; };
 		59B1DB4D160E5672000F4EFB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB4C160E5672000F4EFB /* Default@2x.png */; };
 		59B1DB4F160E5672000F4EFB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB4E160E5672000F4EFB /* Default-568h@2x.png */; };
-		59B1DB58160E5672000F4EFB /* TMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB57160E5672000F4EFB /* TMViewController.m */; };
 		59B1DB5F160E56AC000F4EFB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB5E160E56AC000F4EFB /* MapKit.framework */; };
 		59B1DB61160E56B1000F4EFB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B1DB60160E56B1000F4EFB /* CoreLocation.framework */; };
-		59B1DB6E160F738C000F4EFB /* TMTripSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB6D160F738C000F4EFB /* TMTripSegment.m */; };
-		59B1DB71160F7829000F4EFB /* NSString+StripHTMLTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB70160F7829000F4EFB /* NSString+StripHTMLTags.m */; };
-		59B1DB74160F813C000F4EFB /* TMTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB73160F813C000F4EFB /* TMTrip.m */; };
-		59B1DB77160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB76160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m */; };
-		59B1DB7E160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB7D160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m */; };
-		59B1DB81160F86DA000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */; };
-		59B1DB8A160F9BEF000F4EFB /* TMSegmentAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB89160F9BEF000F4EFB /* TMSegmentAnnotation.m */; };
-		59B1DB9416101E65000F4EFB /* TMAnnotationImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1DB9316101E65000F4EFB /* TMAnnotationImageHelper.m */; };
 		59B1DB97161021E7000F4EFB /* annotationPoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 59B1DB96161021E7000F4EFB /* annotationPoint.png */; };
+		59B7427A166B1344002D7B8A /* TMSegmentAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B7425D166B1344002D7B8A /* TMSegmentAnnotation.m */; };
+		59B7427B166B1344002D7B8A /* CLLocation+GMapsLocationDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B74260166B1344002D7B8A /* CLLocation+GMapsLocationDecoding.m */; };
+		59B7427C166B1344002D7B8A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B74262166B1344002D7B8A /* MBProgressHUD.m */; };
+		59B7427D166B1344002D7B8A /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B74264166B1344002D7B8A /* MKPolyline+CLLocationArrayToMKOverlay.m */; };
+		59B7427E166B1344002D7B8A /* NSString+GMapsPolylineDecoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B74266166B1344002D7B8A /* NSString+GMapsPolylineDecoding.m */; };
+		59B7427F166B1344002D7B8A /* NSString+StripHTMLTags.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B74268166B1344002D7B8A /* NSString+StripHTMLTags.m */; };
+		59B74280166B1344002D7B8A /* TMAnnotationImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B7426A166B1344002D7B8A /* TMAnnotationImageHelper.m */; };
+		59B74281166B1344002D7B8A /* TMTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B7426C166B1344002D7B8A /* TMTrip.m */; };
+		59B74282166B1344002D7B8A /* TMTripSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B7426E166B1344002D7B8A /* TMTripSegment.m */; };
+		59B74283166B1344002D7B8A /* TMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B74270166B1344002D7B8A /* TMAppDelegate.m */; };
+		59B74284166B1344002D7B8A /* TMDirectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B74272166B1344002D7B8A /* TMDirectionListViewController.m */; };
+		59B74285166B1344002D7B8A /* TMDirectionListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59B74273166B1344002D7B8A /* TMDirectionListViewController.xib */; };
+		59B74286166B1344002D7B8A /* TMDirectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B74275166B1344002D7B8A /* TMDirectionTableViewCell.m */; };
+		59B74287166B1344002D7B8A /* TMDirectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59B74276166B1344002D7B8A /* TMDirectionTableViewCell.xib */; };
+		59B74288166B1344002D7B8A /* TMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B74278166B1344002D7B8A /* TMViewController.m */; };
+		59B74289166B1344002D7B8A /* TMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59B74279166B1344002D7B8A /* TMViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5932022B166AAB6100B7C8CC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = Support/MBProgressHUD.h; sourceTree = "<group>"; };
-		5932022C166AAB6100B7C8CC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = Support/MBProgressHUD.m; sourceTree = "<group>"; };
-		59320230166AC4A900B7C8CC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = TransitMaps/en.lproj/TMViewController.xib; sourceTree = "<group>"; };
-		59320264166AD0D900B7C8CC /* TMDirectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDirectionListViewController.h; sourceTree = "<group>"; };
-		59320265166AD0D900B7C8CC /* TMDirectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDirectionListViewController.m; sourceTree = "<group>"; };
-		59320266166AD0D900B7C8CC /* TMDirectionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMDirectionListViewController.xib; sourceTree = "<group>"; };
 		59320269166ADD5500B7C8CC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		5932026B166ADD6E00B7C8CC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
-		59320275166B074500B7C8CC /* TMDirectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDirectionTableViewCell.h; sourceTree = "<group>"; };
-		59320276166B074500B7C8CC /* TMDirectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDirectionTableViewCell.m; sourceTree = "<group>"; };
-		5932027A166B076100B7C8CC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TMDirectionTableViewCell.xib; sourceTree = "<group>"; };
 		59B1DB34160E5672000F4EFB /* TransitMaps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransitMaps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B1DB38160E5672000F4EFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		59B1DB3A160E5672000F4EFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,32 +49,41 @@
 		59B1DB42160E5672000F4EFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59B1DB44160E5672000F4EFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		59B1DB46160E5672000F4EFB /* TransitMaps-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TransitMaps-Prefix.pch"; sourceTree = "<group>"; };
-		59B1DB47160E5672000F4EFB /* TMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
-		59B1DB48160E5672000F4EFB /* TMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
 		59B1DB4A160E5672000F4EFB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		59B1DB4C160E5672000F4EFB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		59B1DB4E160E5672000F4EFB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		59B1DB56160E5672000F4EFB /* TMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TMViewController.h; sourceTree = "<group>"; };
-		59B1DB57160E5672000F4EFB /* TMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TMViewController.m; sourceTree = "<group>"; };
 		59B1DB5E160E56AC000F4EFB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		59B1DB60160E56B1000F4EFB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		59B1DB6C160F738C000F4EFB /* TMTripSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTripSegment.h; path = Support/TMTripSegment.h; sourceTree = "<group>"; };
-		59B1DB6D160F738C000F4EFB /* TMTripSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTripSegment.m; path = Support/TMTripSegment.m; sourceTree = "<group>"; };
-		59B1DB6F160F7829000F4EFB /* NSString+StripHTMLTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+StripHTMLTags.h"; path = "Support/NSString+StripHTMLTags.h"; sourceTree = "<group>"; };
-		59B1DB70160F7829000F4EFB /* NSString+StripHTMLTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+StripHTMLTags.m"; path = "Support/NSString+StripHTMLTags.m"; sourceTree = "<group>"; };
-		59B1DB72160F813C000F4EFB /* TMTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMTrip.h; path = Support/TMTrip.h; sourceTree = "<group>"; };
-		59B1DB73160F813C000F4EFB /* TMTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMTrip.m; path = Support/TMTrip.m; sourceTree = "<group>"; };
-		59B1DB75160F8315000F4EFB /* NSString+GMapsPolylineDecoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+GMapsPolylineDecoding.h"; path = "Support/NSString+GMapsPolylineDecoding.h"; sourceTree = "<group>"; };
-		59B1DB76160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+GMapsPolylineDecoding.m"; path = "Support/NSString+GMapsPolylineDecoding.m"; sourceTree = "<group>"; };
-		59B1DB7C160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocation+GMapsLocationDecoding.h"; path = "Support/CLLocation+GMapsLocationDecoding.h"; sourceTree = "<group>"; };
-		59B1DB7D160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLLocation+GMapsLocationDecoding.m"; path = "Support/CLLocation+GMapsLocationDecoding.m"; sourceTree = "<group>"; };
-		59B1DB7F160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MKPolyline+CLLocationArrayToMKOverlay.h"; path = "Support/MKPolyline+CLLocationArrayToMKOverlay.h"; sourceTree = "<group>"; };
-		59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MKPolyline+CLLocationArrayToMKOverlay.m"; path = "Support/MKPolyline+CLLocationArrayToMKOverlay.m"; sourceTree = "<group>"; };
-		59B1DB88160F9BEF000F4EFB /* TMSegmentAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMSegmentAnnotation.h; path = Annotations/TMSegmentAnnotation.h; sourceTree = "<group>"; };
-		59B1DB89160F9BEF000F4EFB /* TMSegmentAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMSegmentAnnotation.m; path = Annotations/TMSegmentAnnotation.m; sourceTree = "<group>"; };
-		59B1DB9216101E65000F4EFB /* TMAnnotationImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TMAnnotationImageHelper.h; path = Support/TMAnnotationImageHelper.h; sourceTree = "<group>"; };
-		59B1DB9316101E65000F4EFB /* TMAnnotationImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TMAnnotationImageHelper.m; path = Support/TMAnnotationImageHelper.m; sourceTree = "<group>"; };
 		59B1DB96161021E7000F4EFB /* annotationPoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = annotationPoint.png; sourceTree = "<group>"; };
+		59B7425C166B1344002D7B8A /* TMSegmentAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMSegmentAnnotation.h; sourceTree = "<group>"; };
+		59B7425D166B1344002D7B8A /* TMSegmentAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMSegmentAnnotation.m; sourceTree = "<group>"; };
+		59B7425F166B1344002D7B8A /* CLLocation+GMapsLocationDecoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+GMapsLocationDecoding.h"; sourceTree = "<group>"; };
+		59B74260166B1344002D7B8A /* CLLocation+GMapsLocationDecoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+GMapsLocationDecoding.m"; sourceTree = "<group>"; };
+		59B74261166B1344002D7B8A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		59B74262166B1344002D7B8A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		59B74263166B1344002D7B8A /* MKPolyline+CLLocationArrayToMKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKPolyline+CLLocationArrayToMKOverlay.h"; sourceTree = "<group>"; };
+		59B74264166B1344002D7B8A /* MKPolyline+CLLocationArrayToMKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKPolyline+CLLocationArrayToMKOverlay.m"; sourceTree = "<group>"; };
+		59B74265166B1344002D7B8A /* NSString+GMapsPolylineDecoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GMapsPolylineDecoding.h"; sourceTree = "<group>"; };
+		59B74266166B1344002D7B8A /* NSString+GMapsPolylineDecoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GMapsPolylineDecoding.m"; sourceTree = "<group>"; };
+		59B74267166B1344002D7B8A /* NSString+StripHTMLTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StripHTMLTags.h"; sourceTree = "<group>"; };
+		59B74268166B1344002D7B8A /* NSString+StripHTMLTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StripHTMLTags.m"; sourceTree = "<group>"; };
+		59B74269166B1344002D7B8A /* TMAnnotationImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAnnotationImageHelper.h; sourceTree = "<group>"; };
+		59B7426A166B1344002D7B8A /* TMAnnotationImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAnnotationImageHelper.m; sourceTree = "<group>"; };
+		59B7426B166B1344002D7B8A /* TMTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTrip.h; sourceTree = "<group>"; };
+		59B7426C166B1344002D7B8A /* TMTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTrip.m; sourceTree = "<group>"; };
+		59B7426D166B1344002D7B8A /* TMTripSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMTripSegment.h; sourceTree = "<group>"; };
+		59B7426E166B1344002D7B8A /* TMTripSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMTripSegment.m; sourceTree = "<group>"; };
+		59B7426F166B1344002D7B8A /* TMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMAppDelegate.h; sourceTree = "<group>"; };
+		59B74270166B1344002D7B8A /* TMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMAppDelegate.m; sourceTree = "<group>"; };
+		59B74271166B1344002D7B8A /* TMDirectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDirectionListViewController.h; sourceTree = "<group>"; };
+		59B74272166B1344002D7B8A /* TMDirectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDirectionListViewController.m; sourceTree = "<group>"; };
+		59B74273166B1344002D7B8A /* TMDirectionListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMDirectionListViewController.xib; sourceTree = "<group>"; };
+		59B74274166B1344002D7B8A /* TMDirectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDirectionTableViewCell.h; sourceTree = "<group>"; };
+		59B74275166B1344002D7B8A /* TMDirectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDirectionTableViewCell.m; sourceTree = "<group>"; };
+		59B74276166B1344002D7B8A /* TMDirectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMDirectionTableViewCell.xib; sourceTree = "<group>"; };
+		59B74277166B1344002D7B8A /* TMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMViewController.h; sourceTree = "<group>"; };
+		59B74278166B1344002D7B8A /* TMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMViewController.m; sourceTree = "<group>"; };
+		59B74279166B1344002D7B8A /* TMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TMViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,18 +134,7 @@
 		59B1DB3E160E5672000F4EFB /* TransitMaps */ = {
 			isa = PBXGroup;
 			children = (
-				59B1DB6A160F62CA000F4EFB /* Support */,
-				59B1DB47160E5672000F4EFB /* TMAppDelegate.h */,
-				59B1DB48160E5672000F4EFB /* TMAppDelegate.m */,
-				5932022F166AC4A900B7C8CC /* TMViewController.xib */,
-				59B1DB56160E5672000F4EFB /* TMViewController.h */,
-				59B1DB57160E5672000F4EFB /* TMViewController.m */,
-				59320264166AD0D900B7C8CC /* TMDirectionListViewController.h */,
-				59320265166AD0D900B7C8CC /* TMDirectionListViewController.m */,
-				59320266166AD0D900B7C8CC /* TMDirectionListViewController.xib */,
-				59320275166B074500B7C8CC /* TMDirectionTableViewCell.h */,
-				59320276166B074500B7C8CC /* TMDirectionTableViewCell.m */,
-				59320279166B076100B7C8CC /* TMDirectionTableViewCell.xib */,
+				59B7425A166B1344002D7B8A /* Classes */,
 				59B1DB3F160E5672000F4EFB /* Supporting Files */,
 			);
 			path = TransitMaps;
@@ -168,45 +157,56 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		59B1DB6A160F62CA000F4EFB /* Support */ = {
+		59B7425A166B1344002D7B8A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5932022B166AAB6100B7C8CC /* MBProgressHUD.h */,
-				5932022C166AAB6100B7C8CC /* MBProgressHUD.m */,
-				59B1DB87160F9BD3000F4EFB /* Annotations */,
-				59B1DB78160F8378000F4EFB /* Categories */,
-				59B1DB6C160F738C000F4EFB /* TMTripSegment.h */,
-				59B1DB6D160F738C000F4EFB /* TMTripSegment.m */,
-				59B1DB72160F813C000F4EFB /* TMTrip.h */,
-				59B1DB73160F813C000F4EFB /* TMTrip.m */,
+				59B7425B166B1344002D7B8A /* Annotations */,
+				59B7425E166B1344002D7B8A /* Support */,
+				59B7426F166B1344002D7B8A /* TMAppDelegate.h */,
+				59B74270166B1344002D7B8A /* TMAppDelegate.m */,
+				59B74271166B1344002D7B8A /* TMDirectionListViewController.h */,
+				59B74272166B1344002D7B8A /* TMDirectionListViewController.m */,
+				59B74273166B1344002D7B8A /* TMDirectionListViewController.xib */,
+				59B74274166B1344002D7B8A /* TMDirectionTableViewCell.h */,
+				59B74275166B1344002D7B8A /* TMDirectionTableViewCell.m */,
+				59B74276166B1344002D7B8A /* TMDirectionTableViewCell.xib */,
+				59B74277166B1344002D7B8A /* TMViewController.h */,
+				59B74278166B1344002D7B8A /* TMViewController.m */,
+				59B74279166B1344002D7B8A /* TMViewController.xib */,
 			);
-			name = Support;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		59B1DB78160F8378000F4EFB /* Categories */ = {
+		59B7425B166B1344002D7B8A /* Annotations */ = {
 			isa = PBXGroup;
 			children = (
-				59B1DB7C160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.h */,
-				59B1DB7D160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m */,
-				59B1DB6F160F7829000F4EFB /* NSString+StripHTMLTags.h */,
-				59B1DB70160F7829000F4EFB /* NSString+StripHTMLTags.m */,
-				59B1DB75160F8315000F4EFB /* NSString+GMapsPolylineDecoding.h */,
-				59B1DB76160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m */,
-				59B1DB7F160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.h */,
-				59B1DB80160F86D9000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m */,
+				59B7425C166B1344002D7B8A /* TMSegmentAnnotation.h */,
+				59B7425D166B1344002D7B8A /* TMSegmentAnnotation.m */,
 			);
-			name = Categories;
+			path = Annotations;
 			sourceTree = "<group>";
 		};
-		59B1DB87160F9BD3000F4EFB /* Annotations */ = {
+		59B7425E166B1344002D7B8A /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				59B1DB88160F9BEF000F4EFB /* TMSegmentAnnotation.h */,
-				59B1DB89160F9BEF000F4EFB /* TMSegmentAnnotation.m */,
-				59B1DB9216101E65000F4EFB /* TMAnnotationImageHelper.h */,
-				59B1DB9316101E65000F4EFB /* TMAnnotationImageHelper.m */,
+				59B7425F166B1344002D7B8A /* CLLocation+GMapsLocationDecoding.h */,
+				59B74260166B1344002D7B8A /* CLLocation+GMapsLocationDecoding.m */,
+				59B74261166B1344002D7B8A /* MBProgressHUD.h */,
+				59B74262166B1344002D7B8A /* MBProgressHUD.m */,
+				59B74263166B1344002D7B8A /* MKPolyline+CLLocationArrayToMKOverlay.h */,
+				59B74264166B1344002D7B8A /* MKPolyline+CLLocationArrayToMKOverlay.m */,
+				59B74265166B1344002D7B8A /* NSString+GMapsPolylineDecoding.h */,
+				59B74266166B1344002D7B8A /* NSString+GMapsPolylineDecoding.m */,
+				59B74267166B1344002D7B8A /* NSString+StripHTMLTags.h */,
+				59B74268166B1344002D7B8A /* NSString+StripHTMLTags.m */,
+				59B74269166B1344002D7B8A /* TMAnnotationImageHelper.h */,
+				59B7426A166B1344002D7B8A /* TMAnnotationImageHelper.m */,
+				59B7426B166B1344002D7B8A /* TMTrip.h */,
+				59B7426C166B1344002D7B8A /* TMTrip.m */,
+				59B7426D166B1344002D7B8A /* TMTripSegment.h */,
+				59B7426E166B1344002D7B8A /* TMTripSegment.m */,
 			);
-			name = Annotations;
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,11 +266,11 @@
 				59B1DB4D160E5672000F4EFB /* Default@2x.png in Resources */,
 				59B1DB4F160E5672000F4EFB /* Default-568h@2x.png in Resources */,
 				59B1DB97161021E7000F4EFB /* annotationPoint.png in Resources */,
-				59320231166AC4A900B7C8CC /* TMViewController.xib in Resources */,
-				59320268166AD0D900B7C8CC /* TMDirectionListViewController.xib in Resources */,
 				5932026A166ADD5500B7C8CC /* Icon@2x.png in Resources */,
 				5932026C166ADD6E00B7C8CC /* Icon.png in Resources */,
-				5932027B166B076100B7C8CC /* TMDirectionTableViewCell.xib in Resources */,
+				59B74285166B1344002D7B8A /* TMDirectionListViewController.xib in Resources */,
+				59B74287166B1344002D7B8A /* TMDirectionTableViewCell.xib in Resources */,
+				59B74289166B1344002D7B8A /* TMViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,42 +282,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				59B1DB45160E5672000F4EFB /* main.m in Sources */,
-				59B1DB49160E5672000F4EFB /* TMAppDelegate.m in Sources */,
-				59B1DB58160E5672000F4EFB /* TMViewController.m in Sources */,
-				59B1DB6E160F738C000F4EFB /* TMTripSegment.m in Sources */,
-				59B1DB71160F7829000F4EFB /* NSString+StripHTMLTags.m in Sources */,
-				59B1DB74160F813C000F4EFB /* TMTrip.m in Sources */,
-				59B1DB77160F8315000F4EFB /* NSString+GMapsPolylineDecoding.m in Sources */,
-				59B1DB7E160F847D000F4EFB /* CLLocation+GMapsLocationDecoding.m in Sources */,
-				59B1DB81160F86DA000F4EFB /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */,
-				59B1DB8A160F9BEF000F4EFB /* TMSegmentAnnotation.m in Sources */,
-				59B1DB9416101E65000F4EFB /* TMAnnotationImageHelper.m in Sources */,
-				5932022D166AAB6100B7C8CC /* MBProgressHUD.m in Sources */,
-				59320267166AD0D900B7C8CC /* TMDirectionListViewController.m in Sources */,
-				59320277166B074500B7C8CC /* TMDirectionTableViewCell.m in Sources */,
+				59B7427A166B1344002D7B8A /* TMSegmentAnnotation.m in Sources */,
+				59B7427B166B1344002D7B8A /* CLLocation+GMapsLocationDecoding.m in Sources */,
+				59B7427C166B1344002D7B8A /* MBProgressHUD.m in Sources */,
+				59B7427D166B1344002D7B8A /* MKPolyline+CLLocationArrayToMKOverlay.m in Sources */,
+				59B7427E166B1344002D7B8A /* NSString+GMapsPolylineDecoding.m in Sources */,
+				59B7427F166B1344002D7B8A /* NSString+StripHTMLTags.m in Sources */,
+				59B74280166B1344002D7B8A /* TMAnnotationImageHelper.m in Sources */,
+				59B74281166B1344002D7B8A /* TMTrip.m in Sources */,
+				59B74282166B1344002D7B8A /* TMTripSegment.m in Sources */,
+				59B74283166B1344002D7B8A /* TMAppDelegate.m in Sources */,
+				59B74284166B1344002D7B8A /* TMDirectionListViewController.m in Sources */,
+				59B74286166B1344002D7B8A /* TMDirectionTableViewCell.m in Sources */,
+				59B74288166B1344002D7B8A /* TMViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5932022F166AC4A900B7C8CC /* TMViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59320230166AC4A900B7C8CC /* en */,
-			);
-			name = TMViewController.xib;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		59320279166B076100B7C8CC /* TMDirectionTableViewCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5932027A166B076100B7C8CC /* en */,
-			);
-			name = TMDirectionTableViewCell.xib;
-			sourceTree = "<group>";
-		};
 		59B1DB41160E5672000F4EFB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
