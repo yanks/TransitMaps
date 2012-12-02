@@ -39,27 +39,6 @@
 	_startTime = [[NSDate date] timeIntervalSince1970];
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-	[_mapView addGestureRecognizer:_recognizer];
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-	[_mapView removeGestureRecognizer:_recognizer];
-}
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-	[textField resignFirstResponder];
-	if( textField == _fromTextField ){
-		[_toTextField becomeFirstResponder];
-	}
-	if( _toTextField == textField ) [self performSearch];
-	
-	return NO;
-}
-
 - (void)performSearch
 {
 	
@@ -172,6 +151,7 @@
 	[[self view] addSubview:_tripOverviewView];
 }
 
+#pragma mark - MapKit delegate methods
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id )overlay
 {
@@ -223,12 +203,6 @@
 	return nil;
 }
 
-- (void)mapTapped:(id)sender
-{
-	[_fromTextField resignFirstResponder];
-	[_toTextField resignFirstResponder];
-}
-
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
 	//we don't zoom after a period of time post-launch. let's try 5 seconds
@@ -236,10 +210,35 @@
 		[_mapView setRegion:MKCoordinateRegionMake([[_mapView userLocation] coordinate], MKCoordinateSpanMake(.1, .1))];
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - UITextField delegates
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[_mapView addGestureRecognizer:_recognizer];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+	[_mapView removeGestureRecognizer:_recognizer];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[textField resignFirstResponder];
+	if( textField == _fromTextField ){
+		[_toTextField becomeFirstResponder];
+	}
+	if( _toTextField == textField ) [self performSearch];
+	
+	return NO;
+}
+
+#pragma mark - Interface actions
+
+- (void)mapTapped:(id)sender
+{
+	[_fromTextField resignFirstResponder];
+	[_toTextField resignFirstResponder];
 }
 
 - (IBAction)swapAddressButtonTapped:(id)sender {
@@ -279,6 +278,8 @@
 	[self incrementActiveTripBy:1];
 }
 
+#pragma mark - MapKit transit directions handling
+
 - (void)setDirectionsRequest:(MKDirectionsRequest*)request
 {
 	CLPlacemark* start = [[request source] placemark];
@@ -291,7 +292,20 @@
 - (NSString*)searchStringFromPlacemark:(CLPlacemark*)place
 {
 	if( !place ) return @"Current Location";
-	return [NSString stringWithFormat:@"%@, %@, %@", [place thoroughfare], [place locality], [place administrativeArea]];
+
+	//drop down to coordinates if we don't have enough descriptive data (example: 'central park')
+	if( ![place thoroughfare] || ![place locality] ){
+		CLLocation* loc = [place location];
+		CLLocationCoordinate2D coord = [loc coordinate];
+		return [NSString stringWithFormat:@"%f, %f", coord.latitude, coord.longitude];
+	}
+	return [NSString stringWithFormat:@"%@, %@", [place thoroughfare], [place locality]];
+}
+
+- (void)didReceiveMemoryWarning
+{
+	[super didReceiveMemoryWarning];
+	// Dispose of any resources that can be recreated.
 }
 
 @end
