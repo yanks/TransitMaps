@@ -15,7 +15,10 @@
 {
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	// Override point for customization after application launch.
-	self.viewController = [[TMViewController alloc] initWithNibName:@"TMViewController" bundle:nil];
+	UIViewController* rootViewController = [[TMViewController alloc] initWithNibName:@"TMViewController" bundle:nil];
+	UINavigationController* navCtl = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+	[navCtl setNavigationBarHidden:YES];
+	self.viewController = navCtl;
 	self.window.rootViewController = self.viewController;
   // Override point for customization after application launch.
 	[_window makeKeyAndVisible];

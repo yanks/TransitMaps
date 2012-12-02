@@ -34,7 +34,7 @@
 	NSMutableArray* segments = [NSMutableArray array];
 	for( NSDictionary* step in steps ){
 		//less than 150m? skip!
-		if( [[[step objectForKey:@"distance"] objectForKey:@"value"] intValue] < 150 ) continue;
+		if( [[[step objectForKey:@"distance"] objectForKey:@"value"] intValue] < 150 && [segments count] > 0 ) continue;
 		[segments addObject:[TMTripSegment segmentWithMapsData:step]];
 	}
 	[trip setSegments:segments];

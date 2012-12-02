@@ -29,6 +29,8 @@
 		instructions = [instructions stringByStrippingHTML];
 	}
 	
+	[segment setInstructions:instructions];
+	
 	[segment setStartLocation:[CLLocation locationForGMapsDictionary:[data objectForKey:@"start_location"]]];
 	[segment setEndLocation:[CLLocation locationForGMapsDictionary:[data objectForKey:@"end_location"]]];
 	

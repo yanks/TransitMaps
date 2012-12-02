@@ -13,6 +13,7 @@
 #import "TMSegmentAnnotation.h"
 #import "TMAnnotationImageHelper.h"
 #import "MBProgressHUD.h"
+#import "TMDirectionListViewController.h"
 
 @interface TMViewController (){
 	NSTimeInterval _startTime;
@@ -230,6 +231,7 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
+	//we don't zoom after a period of time post-launch. let's try 5 seconds
 	if( [[NSDate date] timeIntervalSince1970] - _startTime < 5 )
 		[_mapView setRegion:MKCoordinateRegionMake([[_mapView userLocation] coordinate], MKCoordinateSpanMake(.1, .1))];
 }
@@ -254,6 +256,9 @@
 }
 
 - (IBAction)routeDirectionListButtonTapped:(id)sender {
+	TMDirectionListViewController* ctl = [[TMDirectionListViewController alloc] initWithNibName:@"TMDirectionListViewController" bundle:nil];
+	[ctl setTrip:_activeTrip];
+	[[self navigationController] presentViewController:ctl animated:YES completion:nil];
 }
 
 - (void)incrementActiveTripBy:(int)inc
